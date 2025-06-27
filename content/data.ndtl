@@ -171,9 +171,11 @@ ADD FAVICON TO MEMEX
   PROJ : Memex
   DONE : false
 
-FIX STYLING ISSUE WITH article-containerlower
+FIX STYLING ISSUE WITH LOWER CONTAINER
   TYPE : task
   DATE : 12025-06-27
+  NOTE 
+    article-containerlower size is not correct on edge/chrome/safari
   PROJ : Memex
   DONE : false
 `
