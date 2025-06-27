@@ -166,9 +166,9 @@ function Grid()
             }
           }
 
-          if (SETTINGS.SHOWDONE)
+          if (SETTINGS.SHOWDONE && main.util.isDefined(value.DONE) && value.DONE !== null)
           {
-            let done = main.util.isDefined(value.DONE) ? value.DONE : 'false';
+            let done = value.DONE;
             article += `<a class="article-type" href='#done-${done}'>`;
             article += main.util.buildIcon(done, done, 'article-typeicon');
             article += `</a>`;
