@@ -149,4 +149,25 @@ ADD FAVICON TO MEMEX
   DATE : 12025-06-27
   PROJ : Memex
   DONE : false
+
+ADD ZEN MODE TO MEMEX
+  TYPE : task
+  DATE : 12025-06-27
+  PROJ : Memex
+  NOTE
+    By default set the page to zen mode.
+
+    Zen mode should have 3 components:
+    - Search bar
+    - Time
+    - Weather
+
+    There should be a hot key to switch zen mode on and off
+  DONE : false
+
+ADD FAVICON TO MEMEX
+  TYPE : task
+  DATE : 12025-06-27
+  PROJ : Memex
+  DONE : false
 `
