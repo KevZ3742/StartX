@@ -1,4 +1,19 @@
 var DATABASE = `
+HOW KORMYEN'S MEMEX DATABASE works
+  PERS : KevZ3742
+  SRCE : test
+  LINK : https://github.com/kormyen/memex
+  TYPE : test
+  DATE : 12025-06-27
+  TAGS : test
+  QOTE : 'holly shit this is a rabbit hole'
+  NOTE
+    Available fields (add more as you descover them): 
+    > PERS (Person)
+    > SRCE (Source, i have no idea what this is used for)
+  DONE : false
+  REVI : true
+
 AGAINST BEAUTY IN PHYSICS
   PERS : faun
   SRCE : Merveilles
