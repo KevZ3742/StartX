@@ -170,4 +170,10 @@ ADD FAVICON TO MEMEX
   DATE : 12025-06-27
   PROJ : Memex
   DONE : false
+
+FIX STYLING ISSUE WITH article-containerlower
+  TYPE : task
+  DATE : 12025-06-27
+  PROJ : Memex
+  DONE : false
 `
