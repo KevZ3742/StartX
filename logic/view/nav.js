@@ -1,17 +1,13 @@
-function Nav()
-{
+function Nav() {
   this.container = null;
 
-  this.install = function(container)
-  {
+  this.install = function (container) {
     this.container = container;
   }
 
-  this.display = function(value)
-  {
+  this.display = function (value) {
     let navContent = ``;
-    if (window.showAdd !== undefined && window.showAdd)
-    {
+    if (window.showAdd !== undefined && window.showAdd) {
       // ADD
       navContent += `<div class="nav-itemgroup">`;
       navContent += `<a href='#add' class="nav-item">`;
@@ -29,8 +25,7 @@ function Nav()
     navContent += `</div>`;
 
     // DONE
-    if (SETTINGS.SHOWDONE)
-    {
+    if (SETTINGS.SHOWDONE) {
       navContent += `<div class="nav-itemgroup">`;
       navContent += `<a href='#done-true' class="nav-item">`;
       navContent += `<div class="nav-itemcount">${value.done}</div>`;
@@ -44,22 +39,26 @@ function Nav()
     }
 
     navContent += `<div class="nav-itemgroup">`;
-    for (let ty = 0; ty < Math.min(value.types.length, SETTINGS.STATSNUMTYPE); ty++) 
-    {
+    navContent += `<div class="nav-typecontainer">`; // ← Scroll wrapper
+
+    for (let ty = 0; ty < Math.min(value.types.length, SETTINGS.STATSNUMTYPE); ty++) {
       const type = value.types[ty][0];
       const count = value.types[ty][1];
       const icon = main.util.getIcon(type);
+
       navContent += `<a href='#type-${type}' class="nav-item">`;
       navContent += `<div class="nav-itemcount">${count}</div>`;
       navContent += `<i title="${type}" class="nav-itemicon ${icon}"></i>`;
       navContent += `</a>`;
     }
-    navContent += `</div>`;
+
+    navContent += `</div>`; // Close nav-typecontainer
+    navContent += `</div>`; // Close nav-itemgroup
+
 
     // TERM
     navContent += `<div class="nav-itemgroup">`;
-    if (value.terms > 0)
-    {
+    if (value.terms > 0) {
       navContent += `<a href='#term' class="nav-item">`;
       navContent += `<div class="nav-itemcount">${value.terms}</div>`;
       navContent += `<i title="terms" class="nav-itemicon fas fa-ribbon"></i>`;
@@ -69,13 +68,11 @@ function Nav()
 
     // TAGS
     navContent += `<div class="nav-itemgroup">`;
-    if (value.tags.length > 0)
-    {
+    if (value.tags.length > 0) {
       navContent += `<i title="tags" class="nav-tagicon fas fa-tag"></i>`;
       navContent += `<div class="nav-tagcontainer">`;
-      
-      for (var t = 0; t < Math.min(value.tags.length, SETTINGS.STATSNUMTAGS); t++) 
-      {
+
+      for (var t = 0; t < Math.min(value.tags.length, SETTINGS.STATSNUMTAGS); t++) {
         navContent += `<a class="nav-tag" href='#tag-${value.tags[t][0]}'>`;
         navContent += `<div class="nav-tagcount">${value.tags[t][1]}</div>`;
         navContent += `<div class="nav-taglabel">${value.tags[t][0]}</div>`;

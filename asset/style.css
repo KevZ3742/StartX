@@ -176,6 +176,35 @@ nav::-webkit-scrollbar {
 	width: 100%;
   float: left;
 }
+.nav-typecontainer {
+  max-height: calc(2.0625em * 10); /* 10 items tall */
+  overflow-y: auto;
+  padding-right: 4px;
+
+  scrollbar-width: none;
+  scrollbar-color: var(--color-scroll-thumb, transparent);
+}
+
+.nav-typecontainer:hover {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scroll-thumb, transparent);
+}
+
+.nav-typecontainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.nav-typecontainer:hover::-webkit-scrollbar {
+  width: 6px;
+}
+.nav-typecontainer:hover::-webkit-scrollbar-thumb {
+  background: var(--color-scroll-thumb, #666);
+  border-radius: 3px;
+}
+.nav-typecontainer:hover::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
 .nav-item {
   padding-bottom: calc(var(--size-menu-item-sepv) / 2);
 	padding-top: calc(var(--size-menu-item-sepv) / 2);

@@ -51,8 +51,8 @@ Stored in a human-readable, flat-file database called [Indental](https://wiki.xx
 
 | Setting  | Description |
 |            ---: | :---                                                                                                |
-|    STATSNUMTAGS | max limit of tags to show in menu                                                                   |
-|    STATSNUMTYPE | max limit of types to show in menu                                                                  |
+|    STATSNUMTAGS | max limit of tags to show in menu (set to `Infinity` for scroll area)                               |
+|    STATSNUMTYPE | max limit of types to show in menu (set to `Infinity` for scroll area)                              |
 |     LOADANIMNUM | threshold number of articles in query/displayed to trigger loading animation to display             |
 |     WIDEARTICLE | allow wide entries (`WIDE : true`)                                                                  |
 | AUTOWIDETRIGGER | automatically wide entry if it has more QOTE entries than this number                               |
