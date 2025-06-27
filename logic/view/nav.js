@@ -71,8 +71,9 @@ function Nav()
     navContent += `<div class="nav-itemgroup">`;
     if (value.tags.length > 0)
     {
-      navContent += `<div class="nav-tagcontainer">`;
       navContent += `<i title="tags" class="nav-tagicon fas fa-tag"></i>`;
+      navContent += `<div class="nav-tagcontainer">`;
+      
       for (var t = 0; t < Math.min(value.tags.length, SETTINGS.STATSNUMTAGS); t++) 
       {
         navContent += `<a class="nav-tag" href='#tag-${value.tags[t][0]}'>`;

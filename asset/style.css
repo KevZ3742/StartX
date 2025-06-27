@@ -207,8 +207,19 @@ nav::-webkit-scrollbar {
 	float: left;
 }
 .nav-tagcontainer {
-	margin: 0 auto;
-	display: table;
+  max-height: 200px;
+  overflow-y: auto;
+  display: block;
+  margin: 0 auto;
+  padding-right: 4px;
+
+  /* Hide scrollbar by default */
+  scrollbar-width: none; /* Firefox */
+}
+.nav-tagcontainer:hover {
+  scrollbar-width: thin;
+  scrollbar-color: var(--f_low) transparent;
+  
 }
 .nav-tagicon {
 	padding-bottom: calc(var(--size-menu-item-sepv) / 2);
