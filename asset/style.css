@@ -269,6 +269,7 @@ main:after {
 
 /* GRID ITEM */
 .article, .article-wide {
+  border: 1px solid var(--b_med);
 	border-radius: var(--size-item-corner);
   margin-bottom: var(--size-grid-gutter);
   background: var(--color-itembg);
