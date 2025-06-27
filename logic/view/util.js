@@ -13,33 +13,35 @@ function Util()
     let icon = '';
     switch (type) 
     {
-        case 'article': icon = 'far fa-newspaper'; break;
-        case 'podcast': icon = 'fas fa-podcast'; break;
-        case 'video': icon = 'fas fa-tv'; break;
-        case 'list': icon = 'fas fa-file-alt'; break;
-        case 'book': icon = 'fas fa-book-open'; break;
-        case 'game': icon = 'fas fa-gamepad'; break;
-        case 'service': icon = 'fas fa-server'; break;
-        case 'lecture': icon = 'fas fa-chalkboard-teacher'; break;
-        case 'quote': icon = 'fas fa-comment'; break;
-        case 'tool': icon = 'fas fa-wrench'; break;
-        case 'music': icon = 'fas fa-music'; break;
-        case 'image': icon = 'fas fa-image'; break;
-        case 'encyclopedia': icon = 'fas fa-globe'; break;
-        case 'term': icon = 'fas fa-ribbon'; break;
-        case 'note': icon = 'fas fa-sticky-note'; break;
-        case 'inspiration': icon = 'fas fa-star'; break;
-        case 'date': icon = 'fas fa-clock'; break;
-        case 'author': icon = 'fas fa-user'; break;
-        case 'tags': icon = 'fas fa-tag'; break;
-        case 'project': icon = 'fas fa-leaf'; break;
-        case 'progress': icon = 'fas fa-clock'; break;
-        case 'file': icon = 'fas fa-folder-open'; break;
-        case 'dash': icon = 'fas fa-caret-right'; break;
-        case 'link': icon = 'fas fa-link'; break;
-        case 'true': icon = 'fas fa-check'; break;
-        case 'false': icon = 'fas fa-times'; break;
-      }
+      case 'article': icon = 'far fa-newspaper'; break;
+      case 'podcast': icon = 'fas fa-podcast'; break;
+      case 'video': icon = 'fas fa-tv'; break;
+      case 'list': icon = 'fas fa-file-alt'; break;
+      case 'book': icon = 'fas fa-book-open'; break;
+      case 'game': icon = 'fas fa-gamepad'; break;
+      case 'service': icon = 'fas fa-server'; break;
+      case 'lecture': icon = 'fas fa-chalkboard-teacher'; break;
+      case 'quote': icon = 'fas fa-comment'; break;
+      case 'tool': icon = 'fas fa-wrench'; break;
+      case 'music': icon = 'fas fa-music'; break;
+      case 'image': icon = 'fas fa-image'; break;
+      case 'encyclopedia': icon = 'fas fa-globe'; break;
+      case 'term': icon = 'fas fa-ribbon'; break;
+      case 'note': icon = 'fas fa-sticky-note'; break;
+      case 'inspiration': icon = 'fas fa-star'; break;
+      case 'date': icon = 'fas fa-clock'; break;
+      case 'author': icon = 'fas fa-user'; break;
+      case 'tags': icon = 'fas fa-tag'; break;
+      case 'project': icon = 'fas fa-leaf'; break;
+      case 'progress': icon = 'fas fa-clock'; break;
+      case 'file': icon = 'fas fa-folder-open'; break;
+      case 'dash': icon = 'fas fa-caret-right'; break;
+      case 'link': icon = 'fas fa-link'; break;
+      case 'true': icon = 'fas fa-check'; break;
+      case 'false': icon = 'fas fa-times'; break;
+      case 'social': icon = 'fas fa-comment-dots'; break;
+      case 'task' : icon = 'fas fa-tasks'; break;
+    }
     return icon;
   }
 

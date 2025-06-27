@@ -3,7 +3,115 @@ HOWDY PORTAL
   LINK : https://howdy.tamu.edu/main/home/card-view
   TYPE : link
   DATE : 12025-06-27
-  TAGS : school
+  TAGS : school, bookmark
+
+CANVAS
+  LINK : https://canvas.tamu.edu/
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : school, bookmark
+
+GOOGLE
+  LINK : https://www.google.com/
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark
+
+GOOGLE TRANSLATE
+  LINK : https://translate.google.com/?sl=auto&tl=en&op=translate
+  TYPE : tool
+  DATE : 12025-06-27
+  TAGS : bookmark
+
+GMAIL
+  LINK : https://mail.google.com/mail/u/0/#inbox
+  TYPE : tool
+  DATE : 12025-06-27
+  TAGS : bookmark
+
+GOOGLE DRIVE
+  LINK : https://drive.google.com/drive/u/0/home
+  TYPE : tool
+  DATE : 12025-06-27
+  TAGS : bookmark
+
+CHATGPT
+  LINK : https://chatgpt.com/
+  TYPE : tool
+  DATE : 12025-06-27
+  TAGS : bookmark, ai
+
+DEEPSEEK
+  LINK : https://chat.deepseek.com/
+  TYPE : tool
+  DATE : 12025-06-27
+  TAGS : bookmark, ai
+
+YOUTUBE
+  LINK : https://www.youtube.com/
+  TYPE : social
+  DATE : 12025-06-27
+  TAGS : bookmark, entertainment
+
+REDDIT
+  LINK : https://www.reddit.com/
+  TYPE : social
+  DATE : 12025-06-27
+  TAGS : bookmark, entertainment, forum
+
+INSTAGRAM
+  LINK : https://www.instagram.com/
+  TYPE : social
+  DATE : 12025-06-27
+  TAGS : bookmark, entertainment
+
+TWITCH
+  LINK : https://www.twitch.tv/
+  TYPE : social
+  DATE : 12025-06-27
+  TAGS : bookmark, entertainment
+
+GITHUB
+  LINK : https://github.com/
+  TYPE : tool
+  DATE : 12025-06-27
+  TAGS : bookmark, code
+
+MY ANIME LIST
+  LINK : https://myanimelist.net/
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark, tracker, anime
+
+MY DRAMA LIST
+  LINK : https://mydramalist.com/
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark, tracker, anime
+
+U.GG
+  LINK : https://u.gg/lol/profile/na1/kevz3742-na1/overview
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark, tracker, gaming
+
+TACTICS.TOOLS
+  LINK : https://tactics.tools/
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark, tracker, gaming
+
+TFT ACADEMY
+  LINK : https://tftacademy.com/tierlist/comps
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark, gaming
+
+META TFT
+  LINK : https://www.metatft.com/explorer
+  TYPE : link
+  DATE : 12025-06-27
+  TAGS : bookmark, tracker, gaming
 
 MEMEX
   PERS : KevZ3742
@@ -35,4 +143,10 @@ MEMEX
     - SRCE: the source of the materal
   DONE : false
   REVI : true
+
+ADD FAVICON TO MEMEX
+  TYPE : task
+  DATE : 12025-06-27
+  PROJ : Memex
+  DONE : false
 `
