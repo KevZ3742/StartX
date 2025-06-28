@@ -768,17 +768,26 @@ article:hover .textIcon {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 .zen-time {
   font-size: 3rem;
   color: var(--f_high);
 }
+.zen-weather-wrapper {
+  display: flex;
+  align-items: center;
+}
+.zen-weather-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 8px;
+}
 .zen-temp-toggle {
   background: none;
   border: none;
   color: var(--f_high);
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   padding: 0;
 }

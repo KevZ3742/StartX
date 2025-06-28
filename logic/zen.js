@@ -10,28 +10,46 @@ function Zen() {
   this.wrapper = document.createElement('div');
   this.wrapper.classList.add('zen-wrapper');
 
-  // Header: time (left), weather (right)
+  // Header: time on left, weather (icon + toggle) on right
   this.header = document.createElement('div');
   this.header.classList.add('zen-header');
 
-  // Time
+  // Time display
   this.timeDisplay = document.createElement('div');
   this.timeDisplay.classList.add('zen-time');
 
-  // Weather (acts as button)
+  // Weather wrapper with icon + temperature toggle button
+  this.weatherWrapper = document.createElement('div');
+  this.weatherWrapper.classList.add('zen-weather-wrapper');
+  this.weatherWrapper.style.display = 'flex';
+  this.weatherWrapper.style.alignItems = 'center';
+
+  // Weather icon image
+  this.weatherIcon = document.createElement('img');
+  this.weatherIcon.classList.add('zen-weather-icon');
+  this.weatherIcon.style.width = '24px';
+  this.weatherIcon.style.height = '24px';
+  this.weatherIcon.style.marginRight = '8px';
+
+  // Temperature toggle button
   this.weatherText = document.createElement('button');
   this.weatherText.classList.add('zen-temp-toggle');
 
+  this.weatherWrapper.appendChild(this.weatherIcon);
+  this.weatherWrapper.appendChild(this.weatherText);
+
   this.header.appendChild(this.timeDisplay);
-  this.header.appendChild(this.weatherText);
+  this.header.appendChild(this.weatherWrapper);
 
   // Search container
   this.searchContainer = document.createElement('div');
   this.searchContainer.classList.add('zen-search-container');
 
+  // Font Awesome search icon
   this.searchIcon = document.createElement('i');
   this.searchIcon.classList.add('fas', 'fa-search', 'zen-search-icon');
 
+  // Search input
   this.searchBar = document.createElement('input');
   this.searchBar.type = 'text';
   this.searchBar.placeholder = 'Search or enter address...';
@@ -40,13 +58,13 @@ function Zen() {
   this.searchContainer.appendChild(this.searchIcon);
   this.searchContainer.appendChild(this.searchBar);
 
-  // Assemble
+  // Assemble the overlay
   this.wrapper.appendChild(this.header);
   this.wrapper.appendChild(this.searchContainer);
   this.overlay.appendChild(this.wrapper);
   document.body.appendChild(this.overlay);
 
-  // Search handler
+  // Search on Enter key
   this.searchBar.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       let query = this.searchBar.value.trim();
@@ -69,7 +87,7 @@ function Zen() {
     }
   });
 
-  // Toggle Zen mode
+  // Toggle Zen mode display
   this.onToggle = () => {
     this.enabled = !this.enabled;
     this.overlay.style.display = this.enabled ? 'flex' : 'none';
@@ -78,7 +96,7 @@ function Zen() {
     }
   };
 
-  // Clock
+  // Clock updater
   this.updateTime = () => {
     const now = new Date();
     const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
@@ -87,10 +105,36 @@ function Zen() {
   setInterval(this.updateTime, 1000);
   this.updateTime();
 
-  // Weather
-  this.tempUnit = 'F'; // Default to Fahrenheit
+  // Weather code to icon URL mapping
+  const weatherCodeToIcon = {
+    0: 'https://cdn-icons-png.flaticon.com/512/869/869869.png',        // Clear sky
+    1: 'https://cdn-icons-png.flaticon.com/512/1163/1163624.png',      // Mainly clear
+    2: 'https://cdn-icons-png.flaticon.com/512/1163/1163624.png',      // Partly cloudy
+    3: 'https://cdn-icons-png.flaticon.com/512/414/414825.png',        // Overcast
+    45: 'https://cdn-icons-png.flaticon.com/512/1163/1163634.png',     // Fog
+    48: 'https://cdn-icons-png.flaticon.com/512/1163/1163634.png',     // Depositing rime fog
+    51: 'https://cdn-icons-png.flaticon.com/512/1163/1163620.png',     // Drizzle light
+    53: 'https://cdn-icons-png.flaticon.com/512/1163/1163620.png',     // Drizzle moderate
+    55: 'https://cdn-icons-png.flaticon.com/512/1163/1163620.png',     // Drizzle dense
+    61: 'https://cdn-icons-png.flaticon.com/512/1163/1163615.png',     // Rain slight
+    63: 'https://cdn-icons-png.flaticon.com/512/1163/1163615.png',     // Rain moderate
+    65: 'https://cdn-icons-png.flaticon.com/512/1163/1163615.png',     // Rain heavy
+    71: 'https://cdn-icons-png.flaticon.com/512/1163/1163639.png',     // Snow slight
+    73: 'https://cdn-icons-png.flaticon.com/512/1163/1163639.png',     // Snow moderate
+    75: 'https://cdn-icons-png.flaticon.com/512/1163/1163639.png',     // Snow heavy
+    80: 'https://cdn-icons-png.flaticon.com/512/1163/1163615.png',     // Rain showers
+    81: 'https://cdn-icons-png.flaticon.com/512/1163/1163615.png',     // Rain showers heavy
+    82: 'https://cdn-icons-png.flaticon.com/512/1163/1163615.png',     // Rain showers violent
+    95: 'https://cdn-icons-png.flaticon.com/512/1146/1146869.png',     // Thunderstorm
+    96: 'https://cdn-icons-png.flaticon.com/512/1146/1146869.png',     // Thunderstorm with hail
+    99: 'https://cdn-icons-png.flaticon.com/512/1146/1146869.png'      // Thunderstorm with hail
+  };
+
+  // Temperature unit and weather data storage
+  this.tempUnit = 'F'; // Default Fahrenheit
   this.weatherData = null;
 
+  // Update displayed temperature and icon
   this.updateWeatherDisplay = () => {
     if (!this.weatherData) return;
     const { celsius, fahrenheit } = this.weatherData;
@@ -98,11 +142,13 @@ function Zen() {
     this.weatherText.textContent = display;
   };
 
+  // Click temperature to toggle unit
   this.weatherText.addEventListener('click', () => {
     this.tempUnit = this.tempUnit === 'C' ? 'F' : 'C';
     this.updateWeatherDisplay();
   });
 
+  // Fetch weather data using geolocation + Open-Meteo API
   this.fetchWeather = async () => {
     try {
       navigator.geolocation.getCurrentPosition(async (pos) => {
@@ -115,16 +161,27 @@ function Zen() {
         if (data && data.current_weather) {
           const celsius = Math.round(data.current_weather.temperature);
           const fahrenheit = Math.round((celsius * 9) / 5 + 32);
+          const weatherCode = data.current_weather.weathercode;
+
           this.weatherData = { celsius, fahrenheit };
+
+          // Set weather icon src, fallback to clear sky icon if unknown code
+          this.weatherIcon.src = weatherCodeToIcon[weatherCode] || 'https://cdn-icons-png.flaticon.com/512/869/869869.png';
+          this.weatherIcon.alt = 'Weather icon';
+          this.weatherIcon.style.display = 'inline';
+
           this.updateWeatherDisplay();
         } else {
           this.weatherText.textContent = 'Weather unavailable';
+          this.weatherIcon.style.display = 'none';
         }
       }, () => {
         this.weatherText.textContent = 'Location blocked';
+        this.weatherIcon.style.display = 'none';
       });
     } catch (err) {
       this.weatherText.textContent = 'Error getting weather';
+      this.weatherIcon.style.display = 'none';
     }
   };
 
