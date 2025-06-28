@@ -281,7 +281,7 @@ nav::-webkit-scrollbar {
 	margin-right: var(--size-grid-gutter);
 }
 main {
-  margin: var(--size-grid-gutter) auto;
+  margin: 4.5rem auto var(--size-grid-gutter) auto;
 }
 main:after {
   /* clearfix (reset) */
@@ -758,7 +758,6 @@ article:hover .textIcon {
   align-items: center;
   flex-direction: column;
 }
-
 .zen-wrapper {
   width: 100%;
   max-width: 800px;
@@ -766,32 +765,27 @@ article:hover .textIcon {
   flex-direction: column;
   align-items: center;
 }
-
 .zen-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0.25rem;
 }
-
 .zen-time {
   font-size: 3rem;
   color: var(--f_high);
   text-shadow: var(--glow);
 }
-
 .zen-weather-wrapper {
   display: flex;
   align-items: center;
 }
-
 .zen-weather-icon {
   width: 2rem;
   height: 2rem;
   margin-right: 8px;
   filter: var(--icon-glow);
 }
-
 .zen-temp-toggle {
   background: none;
   border: none;
@@ -801,16 +795,13 @@ article:hover .textIcon {
   padding: 0;
   text-shadow: var(--glow);
 }
-
 .zen-temp-toggle:hover {
   color: var(--f_med);
 }
-
 .zen-search-container {
   position: relative;
   width: 100%;
 }
-
 .zen-search-icon {
   position: absolute;
   left: 1rem;
@@ -820,7 +811,6 @@ article:hover .textIcon {
   font-size: 1.25rem;
   pointer-events: none;
 }
-
 .zen-search {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
@@ -832,8 +822,93 @@ article:hover .textIcon {
   outline: none;
   box-shadow: var(--glow);
 }
-
 .zen-search::placeholder {
   color: var(--f_high);
   opacity: 0.5;
+}
+
+/* Top UI bar for normal (non-zen) mode */
+#top-ui-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4rem;
+  background-color: var(--background, #111);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  user-select: none;
+  gap: 1rem;
+}
+
+/* NEW: Wraps time + search on the left */
+.zen-left-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+}
+#top-ui-bar .zen-time {
+  font-size: 1.5rem;
+  color: var(--f_high);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+#top-ui-bar .zen-search-container {
+  position: relative;
+  flex-grow: 1;
+  height: 2.5rem;
+}
+#top-ui-bar .zen-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--f_high, #aaa);
+  font-size: 1rem;
+  pointer-events: none;
+}
+#top-ui-bar .zen-search {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem 0 2.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--f_high, #888);
+  border-radius: 6px;
+  background-color: var(--b_low, #222);
+  color: var(--f_high, #fff);
+  outline: none;
+  box-shadow: none;
+}
+#top-ui-bar .zen-search::placeholder {
+  color: var(--f_high);
+  opacity: 0.5;
+}
+#top-ui-bar .zen-weather-wrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+#top-ui-bar .zen-weather-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 6px;
+  filter: none;
+}
+#top-ui-bar .zen-temp-toggle {
+  background: none;
+  border: none;
+  color: var(--f_high);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  text-shadow: none;
+}
+#top-ui-bar .zen-temp-toggle:hover {
+  color: var(--f_med);
 }
