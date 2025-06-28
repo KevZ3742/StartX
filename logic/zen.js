@@ -24,12 +24,13 @@ function Zen() {
   this.weatherWrapper.style.display = 'flex';
   this.weatherWrapper.style.alignItems = 'center';
 
-  // Weather icon image
+  // Weather icon image (hidden initially)
   this.weatherIcon = document.createElement('img');
   this.weatherIcon.classList.add('zen-weather-icon');
   this.weatherIcon.style.width = '24px';
   this.weatherIcon.style.height = '24px';
   this.weatherIcon.style.marginRight = '8px';
+  this.weatherIcon.style.display = 'none';  // hide initially
 
   // Temperature toggle button
   this.weatherText = document.createElement('button');
@@ -168,7 +169,7 @@ function Zen() {
           // Set weather icon src, fallback to clear sky icon if unknown code
           this.weatherIcon.src = weatherCodeToIcon[weatherCode] || 'https://cdn-icons-png.flaticon.com/512/869/869869.png';
           this.weatherIcon.alt = 'Weather icon';
-          this.weatherIcon.style.display = 'inline';
+          this.weatherIcon.style.display = 'inline';  // show icon now
 
           this.updateWeatherDisplay();
         } else {
