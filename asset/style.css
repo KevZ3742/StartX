@@ -167,6 +167,8 @@ nav {
 	z-index: 100;
 	left: 0px;
 	top: 0px;
+  border-right: 1px solid var(--b_med);
+  margin-top: 4rem;
 }
 nav:hover {
   opacity: var(--alpha-ascent);
