@@ -109,7 +109,7 @@ function Zen() {
       this.header.appendChild(this.weatherWrapper);
       this.wrapper.appendChild(this.searchContainer);
 
-      setTimeout(() => this.searchBar.focus(), 10);
+      
     } else {
       // Hide Zen overlay, show top container
       this.overlay.style.display = 'none';
@@ -120,6 +120,8 @@ function Zen() {
       this.container.appendChild(this.searchContainer);
       this.container.appendChild(this.weatherWrapper);
     }
+
+    setTimeout(() => this.searchBar.focus(), 10);
   };
 
   // Clock updater
