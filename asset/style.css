@@ -743,15 +743,45 @@ article:hover .textIcon {
   text-decoration: none;
 }
 
-/* Zen mode overlay: visible by default */
-#zen-mode {
+/* Zen overlay*/
+.zen-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-bg);
+  background-color: var(--background, #111);
   z-index: 9999;
-  cursor: default;
-  display: block; /* show by default */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.zen-wrapper {
+  text-align: center;
+  width: 100%;
+}
+.zen-search-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.zen-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--f_high, #aaa);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+.zen-search {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem; /* space for icon */
+  font-size: 1.25rem;
+  border: 3px solid var(--f_high, #888);
+  border-radius: 8px;
+  background-color: var(--b_low, #222);
+  color: var(--f_high, #fff);
+  outline: none;
 }

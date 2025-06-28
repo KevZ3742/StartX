@@ -27,4 +27,5 @@ const SETTINGS =
 	SHOWOVERLAY: true,
 	ZENMODEENABLED: true,
 	ZENMODEHOTKEY: 'Escape',
+	SEARCHENGINE: 'https://www.google.com/search?q=',
 }
