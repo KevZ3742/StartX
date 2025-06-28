@@ -60,6 +60,11 @@ function Zen() {
     this.enabled = !this.enabled;
     this.overlay.style.display = this.enabled ? 'flex' : 'none';
     console.log('Zen mode is now', this.enabled ? 'ON' : 'OFF');
-    if (this.enabled) this.searchBar.focus();
+    if (this.enabled) {
+      // Delay focus slightly to ensure element is visible/rendered
+      setTimeout(() => {
+        this.searchBar.focus();
+      }, 10);
+    }
   };
 }
