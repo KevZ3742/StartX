@@ -1,43 +1,51 @@
-[**Live web version here**](https://kevz3742.github.io/memex/)
+# StartX
 
-**Memex** is a [personal knowledge base](https://scholar.colorado.edu/csci_techreports/931/).
+[**Live web version here**](https://kevz3742.github.io/StartX/)
 
-A bookmarks and notes tool to help with storage and overview.
+StartX is a personal knowledge base and startpage hybrid — a mix of a startpage and a memex.
 
-Read-only and 'sever-less' for easy sharing.
+It helps you organize bookmarks, notes, quotes, images, and projects with an easy, read-only, server-less interface, designed for quick overview and seamless sharing.
 
-<img src='https://raw.githubusercontent.com/kormyen/memex/master/PREVIEW.jpg'/>
+This project is a fork of kormyen's memex: https://github.com/kormyen/memex
 
-Memex supports:
+---
 
-- filtering
-- tags
-- images
-- notes
-- quotes
-- terms
-- links
-- author
-- files
-- projects
-- themes
+![StartX Preview](https://raw.githubusercontent.com/kormyen/memex/master/PREVIEW.jpg)
 
-To change theme simply drag a [theme svg file](https://github.com/hundredrabbits/Themes/tree/master/themes) onto the Memex webpage
+---
 
-More information on themes can be found [here](https://github.com/hundredrabbits/Themes)
+## Features
 
-### Examples
+- Filtering and tag-based organization  
+- Notes, quotes, and terms support  
+- Images and file attachments  
+- Links
+- Metadata  
+- Project grouping  
+- Customizable themes (drag & drop a [theme SVG file](https://github.com/hundredrabbits/Themes/tree/master/themes) onto the page to change the look, more info [here](https://github.com/hundredrabbits/Themes))  
+- Read-only, server-less, lightweight  
+- Zen Mode for distraction-free browsing  
 
-- [Kormyen's Memex](https://kormyen.github.io/memex/) - this repo
-- [Shinestrength's Portfolio](http://www.shinestrength.xyz/) - [repo](https://github.com/shinestrength/memex)
-- Dotcli's Memex - [repo](https://github.com/dotcli/memex)
+---
 
-### Dev
+## What’s new in StartX?
+
+StartX builds on top of Memex by combining a powerful personal knowledge base with a startpage experience, making it your go-to launchpad and archive in one.
+
+- Enhanced startpage feel with quick access to your saved knowledge  
+- UI tweaks for a smoother, more modern browsing experience  
+- Zen Mode toggle enabled by default for distraction-free use
+- Addaptable Favicon that is responsive towards system theme 
+- Additional settings exposed for user customization  
+
+---
+
+## Getting Started / Dev
+
+```bash
+git clone https://github.com/kevz3742/StartX.git
 ```
-git clone git@github.com:kormyen/memex.git
-```
-
-Then open `memex/index.html` in any web browser
+Then open StartX/index.html in any web browser
 
 ### Data
 
@@ -87,15 +95,10 @@ Stored in a human-readable, flat-file database called [Indental](https://wiki.xx
 
 ### Thanks
 
+- Hamish MacDonald ([Memex](https://github.com/kormyen/memex))
 - Devine Lu Linvega ([Oscean](https://github.com/XXIIVV/Oscean))
 - Rekka Bell ([kokorobot](https://github.com/rekkabell/kokorobot))
 - Hundred Rabbits ([Ecosystem](https://github.com/hundredrabbits))
 - Josh Avanier ([Log](https://github.com/joshavanier/log))
 - Alexey Botkov ([Legacy](https://github.com/nomand/Legacy))
 - Seena Burns ([Isolate](https://github.com/seenaburns/isolate))
-
----
-
-Hamish MacDonald
-
-**[Twitter](https://twitter.com/kormyen)** &middot; **[Home](https://kor.nz)**
