@@ -91,6 +91,7 @@ Stored in a human-readable, flat-file database called [Indental](https://wiki.xx
 |     SHOWOVERLAY | toggle display of a dark overlay on image entries when hovered, improving text readability          |
 |  ZENMODEENABLED | enable or disable Zen Mode, which hides interface elements for a distraction-free view              |
 |   ZENMODEHOTKEY | keyboard shortcut to toggle Zen Mode on or off                                                      |
+|   SEARCHENGINE  | default search engine                                                                               |
 
 ---
 
