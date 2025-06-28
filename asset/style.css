@@ -46,6 +46,9 @@
 
   --cursor-expandImage: zoom-in;
   --cursor-minimizeImage: zoom-out;
+
+  --glow: 0 0 5px var(--f_high), 0 0 10px var(--f_high);
+  --icon-glow: drop-shadow(0 0 5px var(--f_high)) drop-shadow(0 0 10px var(--f_high));
 }
 
 * {
@@ -755,6 +758,7 @@ article:hover .textIcon {
   align-items: center;
   flex-direction: column;
 }
+
 .zen-wrapper {
   width: 100%;
   max-width: 800px;
@@ -762,25 +766,32 @@ article:hover .textIcon {
   flex-direction: column;
   align-items: center;
 }
+
 .zen-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0.25rem;
 }
+
 .zen-time {
   font-size: 3rem;
   color: var(--f_high);
+  text-shadow: var(--glow);
 }
+
 .zen-weather-wrapper {
   display: flex;
   align-items: center;
 }
+
 .zen-weather-icon {
   width: 2rem;
   height: 2rem;
   margin-right: 8px;
+  filter: var(--icon-glow);
 }
+
 .zen-temp-toggle {
   background: none;
   border: none;
@@ -788,14 +799,18 @@ article:hover .textIcon {
   font-size: 2rem;
   cursor: pointer;
   padding: 0;
+  text-shadow: var(--glow);
 }
+
 .zen-temp-toggle:hover {
   color: var(--f_med);
 }
+
 .zen-search-container {
   position: relative;
   width: 100%;
 }
+
 .zen-search-icon {
   position: absolute;
   left: 1rem;
@@ -805,6 +820,7 @@ article:hover .textIcon {
   font-size: 1.25rem;
   pointer-events: none;
 }
+
 .zen-search {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
@@ -814,7 +830,9 @@ article:hover .textIcon {
   background-color: var(--b_low, #222);
   color: var(--f_high, #fff);
   outline: none;
+  box-shadow: var(--glow);
 }
+
 .zen-search::placeholder {
   color: var(--f_high);
   opacity: 0.5;
