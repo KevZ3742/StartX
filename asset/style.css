@@ -755,16 +755,39 @@ article:hover .textIcon {
   display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .zen-wrapper {
-  text-align: center;
   width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.zen-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .25rem;
+}
+.zen-time {
+  font-size: 3rem;
+  color: var(--f_high);
+}
+.zen-temp-toggle {
+  background: none;
+  border: none;
+  color: var(--f_high);
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0;
+}
+.zen-temp-toggle:hover {
+  color: var(--f_med);
 }
 .zen-search-container {
   position: relative;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
 }
 .zen-search-icon {
   position: absolute;
@@ -777,7 +800,7 @@ article:hover .textIcon {
 }
 .zen-search {
   width: 100%;
-  padding: 1rem 1rem 1rem 3rem; /* space for icon */
+  padding: 1rem 1rem 1rem 3rem;
   font-size: 1.25rem;
   border: 3px solid var(--f_high, #888);
   border-radius: 8px;
