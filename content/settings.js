@@ -24,5 +24,7 @@ const SETTINGS =
 	SHOWPROG: true,
 	SHOWIMAG: true,
 	SHOWFILE: true,
-	SHOWOVERLAY: true
+	SHOWOVERLAY: true,
+	ZENMODEENABLED: true,
+	ZENMODEHOTKEY: 'Escape',
 }

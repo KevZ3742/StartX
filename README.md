@@ -74,7 +74,9 @@ Stored in a human-readable, flat-file database called [Indental](https://wiki.xx
 |        SHOWPROG | toggle display of entry progress notes                                                              |
 |        SHOWIMAG | toggle display of entry image                                                                       |
 |        SHOWFILE | toggle display of entry file(s)                                                                     |
-|     SHOWOVERLAY | toggle display of dark overlay shown when hovering image type entries to improve text readability   |
+|     SHOWOVERLAY | toggle display of a dark overlay on image entries when hovered, improving text readability          |
+|  ZENMODEENABLED | enable or disable Zen Mode, which hides interface elements for a distraction-free view              |
+|   ZENMODEHOTKEY | keyboard shortcut to toggle Zen Mode on or off                                                      |
 
 ### Dependencies
 
