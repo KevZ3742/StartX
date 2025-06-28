@@ -785,3 +785,7 @@ article:hover .textIcon {
   color: var(--f_high, #fff);
   outline: none;
 }
+.zen-search::placeholder {
+  color: var(--f_high);
+  opacity: 0.5;
+}
