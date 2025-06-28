@@ -47,13 +47,19 @@ git clone https://github.com/kevz3742/StartX.git
 ```
 Then open StartX/index.html in any web browser
 
-### Data
+The **most** ideal way to use this project is to fork it, get up GitHub Pages and set your homepage to your GitHub Pages link
+
+---
+
+## Data
 
 [memex/content/data.ndtl](content/data.ndtl)
 
 Stored in a human-readable, flat-file database called [Indental](https://wiki.xxiivv.com/#indental) which is made by Devine Lu Linvega
 
-### Settings
+---
+
+## Settings
 
 [memex/content/settings.js](content/settings.js)
 
@@ -86,14 +92,18 @@ Stored in a human-readable, flat-file database called [Indental](https://wiki.xx
 |  ZENMODEENABLED | enable or disable Zen Mode, which hides interface elements for a distraction-free view              |
 |   ZENMODEHOTKEY | keyboard shortcut to toggle Zen Mode on or off                                                      |
 
-### Dependencies
+---
+
+## Dependencies
 
 - Database parser: [Indental](https://wiki.xxiivv.com/#indental)
 - Theming: [Themes](https://github.com/hundredrabbits/Themes)
 - Grid layout: [Masonry](https://masonry.desandro.com/)
 - Icons: [Font Awesome](https://fontawesome.com/)
 
-### Thanks
+---
+
+## Thanks
 
 - Hamish MacDonald ([Memex](https://github.com/kormyen/memex))
 - Devine Lu Linvega ([Oscean](https://github.com/XXIIVV/Oscean))
