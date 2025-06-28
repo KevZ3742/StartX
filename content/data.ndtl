@@ -177,5 +177,5 @@ FIX STYLING ISSUE WITH LOWER CONTAINER
   NOTE 
     article-containerlower size is not correct on edge/chrome/safari
   PROJ : Memex
-  DONE : false
+  DONE : true
 `

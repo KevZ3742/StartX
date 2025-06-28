@@ -163,7 +163,6 @@ nav {
 	z-index: 100;
 	left: 0px;
 	top: 0px;
-  /*overflow-y: scroll;*/                 /*allow menu to scroll on small screens*/
 }
 nav:hover {
   opacity: var(--alpha-ascent);
@@ -300,6 +299,7 @@ main:after {
   position: relative;
 	float: left;
   overflow: hidden;
+  overflow-wrap: anywhere;
 }
 @media screen and (min-width: 886px) {
 	.article-wide { 
@@ -322,6 +322,7 @@ article::selection {
   padding: 0 var(--size-grid-gutter) var(--size-grid-gutter);
   display: inline-block;
   z-index: 100;
+  width: 100%;
 }
 
 /*IMAGE*/
