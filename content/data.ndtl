@@ -122,7 +122,7 @@ MEMEX
   DATE : 12025-06-27
   TAGS : software
   QOTE : "Holy shit this is a rabbit hole." -KevZ3742
-  PROJ : Memex
+  PROJ : StartX
   TERM
     > A Memex is a device that stores information and lets you link related items together for easy access. It helps organize and retrieve knowledge efficiently by following these connections.
   NOTE
@@ -144,16 +144,10 @@ MEMEX
   DONE : false
   REVI : true
 
-ADD FAVICON TO MEMEX
-  TYPE : task
-  DATE : 12025-06-27
-  PROJ : Memex
-  DONE : false
-
 ADD ZEN MODE TO MEMEX
   TYPE : task
   DATE : 12025-06-27
-  PROJ : Memex
+  PROJ : StartX
   NOTE
     By default set the page to zen mode.
 
@@ -163,12 +157,12 @@ ADD ZEN MODE TO MEMEX
     - Weather
 
     There should be a hot key to switch zen mode on and off
-  DONE : false
+  DONE : true
 
 ADD FAVICON TO MEMEX
   TYPE : task
   DATE : 12025-06-27
-  PROJ : Memex
+  PROJ : StartX
   DONE : true
 
 FIX STYLING ISSUE WITH LOWER CONTAINER
@@ -176,6 +170,19 @@ FIX STYLING ISSUE WITH LOWER CONTAINER
   DATE : 12025-06-27
   NOTE 
     article-containerlower size is not correct on edge/chrome/safari
-  PROJ : Memex
+  PROJ : StartX
   DONE : true
+
+DIGITAL OCEAN
+  LINK : https://www.digitalocean.com/
+  TYPE : tool
+  DATE : 12025-06-28
+  TAGS : bookmark, code
+
+KCE LURE
+  LINK : https://kcelure.com/
+  AUTH : KevZ3742
+  TYPE : link
+  DATE : 12025-06-28
+  PROJ : KCELure
 `
