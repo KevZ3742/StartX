@@ -141,8 +141,7 @@ MEMEX
     - PERS: a person
     - REVI: ? Revision?
     - SRCE: the source of the materal
-  DONE : false
-  REVI : true
+  DONE : true
 
 ADD ZEN MODE TO MEMEX
   TYPE : task
@@ -185,4 +184,15 @@ KCE LURE
   TYPE : link
   DATE : 12025-06-28
   PROJ : KCELure
+
+StartX
+  AUTH : KevZ3742
+  LINK : https://github.com/KevZ3742/StartX
+  TYPE : tool
+  DATE : 12025-06-28
+  PROJ : StartX
+  NOTE 
+    StartX is an ever growing project. It is "done" unless I magicaly think of more conveient feature to have.
+  TAGS : software, code
+  DONE : true
 `
