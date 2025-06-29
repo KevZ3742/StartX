@@ -185,7 +185,7 @@ KCE LURE
   DATE : 12025-06-28
   PROJ : KCELure
 
-StartX
+STARTX
   AUTH : KevZ3742
   LINK : https://github.com/KevZ3742/StartX
   TYPE : tool
@@ -194,5 +194,17 @@ StartX
   NOTE 
     StartX is an ever growing project. It is "done" unless I magicaly think of more conveient feature to have.
   TAGS : software, code
-  DONE : true
+  DONE : false
+
+ADD FILTER WITH Search
+  TYPE : task
+  DATE : 12025-6-29
+  PROJ : StartX
+  DONE : false
+
+STRIPE
+  LINK : https://stripe.com/
+  TYPE : tool 
+  DATE : 12025-6-29
+  TAGS : code
 `
