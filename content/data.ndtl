@@ -194,7 +194,7 @@ STARTX
   NOTE 
     StartX is an ever growing project. It is "done" unless I magicaly think of more conveient feature to have.
   TAGS : software, code
-  DONE : true
+  DONE : false
 
 ADD FILTER WITH SEARCH
   TYPE : task
@@ -235,6 +235,12 @@ CHICKEN STIRFRY
 
 SET UP DISCOVER MOBILE
   TYPE : task
-  DATE : 12025-6-29
+  DATE : 12025-7-2
+  DONE : false
+
+REMOVE NON TASKS AND PROJECTS FROM DONE INCOMPLETE FIELD
+  TYPE : task
+  DATE : 12025-7-2
+  PROJ : StartX
   DONE : false
 `
