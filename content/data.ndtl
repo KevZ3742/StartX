@@ -196,7 +196,7 @@ STARTX
   TAGS : software, code
   DONE : true
 
-ADD FILTER WITH Search
+ADD FILTER WITH SEARCH
   TYPE : task
   DATE : 12025-6-29
   PROJ : StartX
@@ -232,4 +232,9 @@ CHICKEN STIRFRY
   TYPE : video
   DATE : 12025-7-1
   TAGS : meal prep
+
+SET UP DISCOVER MOBILE
+  TYPE : task
+  DATE : 12025-6-29
+  DONE : false
 `
