@@ -1,5 +1,6 @@
 function Zen() {
   this.enabled = false;
+  this.lastSearchQuery = '';
 
   // Container for top bar when NOT in zen mode
   this.container = document.createElement('div');
@@ -82,15 +83,34 @@ function Zen() {
       const domainPattern = /^[^\s]+\.[^\s]{2,}$/i;
 
       if (urlPattern.test(query) || domainPattern.test(query)) {
+        // Handle URL - existing functionality
         if (/^www\./i.test(query)) {
           query = 'http://' + query;
         } else if (!/^https?:\/\//i.test(query)) {
           query = 'http://' + query;
         }
         window.location.href = query;
+      } else if (!this.enabled) {
+        // When not in Zen mode, maintain the current filter
+        // No need to change hash as it's already set by the input event
+        e.preventDefault(); // Prevent any default behavior that might steal focus
       } else {
+        // In Zen mode, perform web search
         const searchUrl = SETTINGS.SEARCHENGINE + encodeURIComponent(query);
         window.location.href = searchUrl;
+      }
+    }
+  });
+
+  this.searchBar.addEventListener('input', (e) => {
+    if (!this.enabled) {
+      const query = this.searchBar.value.trim();
+      this.lastSearchQuery = query;
+
+      if (query) {
+        window.location.hash = query;
+      } else {
+        window.location.hash = '';
       }
     }
   });
@@ -109,7 +129,8 @@ function Zen() {
       this.header.appendChild(this.weatherWrapper);
       this.wrapper.appendChild(this.searchContainer);
 
-      
+      // Clear the search when entering Zen mode
+      this.searchBar.value = '';
     } else {
       // Hide Zen overlay, show top container
       this.overlay.style.display = 'none';
@@ -119,9 +140,17 @@ function Zen() {
       this.container.appendChild(this.timeDisplay);
       this.container.appendChild(this.searchContainer);
       this.container.appendChild(this.weatherWrapper);
+
+      // Restore the last search query when exiting Zen mode
+      this.searchBar.value = this.lastSearchQuery;
     }
 
-    setTimeout(() => this.searchBar.focus(), 10);
+    // Focus the search bar with a slight delay to ensure it works
+    setTimeout(() => {
+      this.searchBar.focus();
+      // Move cursor to end of text
+      this.searchBar.selectionStart = this.searchBar.selectionEnd = this.searchBar.value.length;
+    }, 10);
   };
 
   // Clock updater

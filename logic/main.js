@@ -20,7 +20,7 @@ function Main() {
     this.wrap = new Wrap();
     this.grid = new Grid();
     this.zen = new Zen();
-    
+
     this.grid.install(
       document.querySelector('main'),
       document.querySelector('.page-overlay'),
@@ -41,13 +41,13 @@ function Main() {
 
     if (SETTINGS.ZENMODEENABLED) {
       this.zen.onToggle();
-    
-    document.addEventListener('keydown', (event) => {
-      if (event.key === SETTINGS.ZENMODEHOTKEY) {
-        this.zen.onToggle();
-      }
-    });
-  }
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === SETTINGS.ZENMODEHOTKEY) {
+          this.zen.onToggle();
+        }
+      });
+    }
 
     seer.note('install main');
   }
@@ -65,9 +65,15 @@ function Main() {
   }
 
   this.load = function () {
+    const activeElement = document.activeElement;
+
     // RESET
     lightbox.close();
-    document.activeElement.blur();
+
+    // Only blur if the active element isn't our search bar
+    if (activeElement !== main.zen.searchBar) {
+      document.activeElement.blur();
+    }
 
     // UPDATE QUERY
     let target = window.document.location.hash;
@@ -95,7 +101,16 @@ function Main() {
     this.articlesDisplayed = filteredLength;
 
     setTimeout(function () { main.build(filtered) }, delay);
-  }
+
+    // Restore focus to search bar if it was focused before
+    if (activeElement === main.zen.searchBar) {
+      setTimeout(() => {
+        main.zen.searchBar.focus();
+        // Move cursor to end of text
+        main.zen.searchBar.selectionStart = main.zen.searchBar.selectionEnd = main.zen.searchBar.value.length;
+      }, 0);
+    }
+  };
 
   this.build = function (filtered) {
     let html = main.grid.buildAllArticles(filtered)

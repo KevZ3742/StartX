@@ -194,13 +194,13 @@ STARTX
   NOTE 
     StartX is an ever growing project. It is "done" unless I magicaly think of more conveient feature to have.
   TAGS : software, code
-  DONE : false
+  DONE : true
 
 ADD FILTER WITH Search
   TYPE : task
   DATE : 12025-6-29
   PROJ : StartX
-  DONE : false
+  DONE : true
 
 STRIPE
   LINK : https://stripe.com/
