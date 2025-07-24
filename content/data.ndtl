@@ -236,7 +236,7 @@ CHICKEN STIRFRY
 SET UP DISCOVER MOBILE
   TYPE : task
   DATE : 12025-7-2
-  DONE : false
+  DONE : true
 
 REMOVE NON TASKS AND PROJECTS FROM DONE INCOMPLETE FIELD
   TYPE : task
@@ -249,6 +249,18 @@ ADD AUTO COMPELE
   DATE : 12025-7-2
   PROJ : StartX
   DONE : false
+
+REACT BITS
+  LINK : https://reactbits.dev/
+  TYPE : tool
+  DATE : 12025-7-5
+  TAGS : ui
+
+SNACK WRAPS
+  LINK : https://www.youtube.com/watch?v=J6HtWGk8xbo&list=WL&index=26
+  TYPE : video
+  DATE : 12025-7-7
+  TAGS : meal prep
 
 ERGEAR HEIGHT ADJUSTABLE ELECTRIC STANDING DESK
   LINK : https://www.amazon.com/ErGear-Adjustable-Electric-Standing-Computer/dp/B0B41YH9B6/ref=sr_1_5?sr=8-5
